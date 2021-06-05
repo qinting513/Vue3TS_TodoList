@@ -14,12 +14,7 @@
    Terminal -> Run Task -> show all Task ->  tsc: watch -ts_second/tsconfig.json
  
 ```
-3.类型注解
-
-4.接口
-5.类
-6.总结
-
+3.webpack编译
 ```
 使用webpack打包ts：
 https://www.jianshu.com/p/2bc50b542969

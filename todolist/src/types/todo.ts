@@ -3,4 +3,5 @@ export interface Todo {
     id: number;
     title: string;
     isCompleted: boolean;
+    deadline?: Date, // 截止日期
   }

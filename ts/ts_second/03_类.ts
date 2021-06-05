@@ -10,10 +10,10 @@
         lastName: string // 名字
         fullName: string //姓名
         
-        constructor(firstName: string, lastName: string){
-            this.firstName = firstName
-            this.lastName = lastName
-            this.fullName = firstName + "_" + lastName
+        constructor(p: IPerson){
+            this.firstName = p.firstName
+            this.lastName = p.lastName
+            this.fullName = p.firstName + "_" + p.lastName
         }
     }
 
@@ -22,7 +22,7 @@
       return person.firstName + "==" + person.lastName;
     }
 
-    const ldh = new User("刘", "德华");
+    const ldh = new User({firstName: '刘', lastName:"德华"});
     console.log(showFull(ldh));
     
 })()

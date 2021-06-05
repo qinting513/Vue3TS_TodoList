@@ -1,6 +1,8 @@
 <template>
   <div class="todo-container">
     <div class="todo-wrap">
+      <h3>{{name}}</h3>
+      <h3>{{age}}</h3>
       <Header :addTodo="addTodo" />
       <List :todos="todos" :deleteTodo="deleteTodo" :updateTodo="updateTodo" />
       <Footer
@@ -24,6 +26,10 @@ export default {
   name: "App",
   components: { Header, List, Footer },
   setup() {
+    let user = reactive({
+      name: '',
+      age: 1,
+    })
     // const state = reactive<{ todos: Todo[] }>({
     //   todos: [
     //     { id: 1, title: "奔驰", isCompleted: false },
@@ -36,6 +42,9 @@ export default {
     });
     // 当界面加载完成后
     onMounted(() => {
+      user.name = "张三"
+      user.age = 30;
+
       setTimeout(() => {
         state.todos = readTodos();
       }, 500);
@@ -67,11 +76,12 @@ export default {
     //   (val) => {
     //     saveTodo(val)
     //   },
-    //   { deep: true }
+    //   { immediate:true, deep: true }
     // );
-    watch(() => state.todos, saveTodos, { deep: true });
+    watch(() => state.todos, saveTodos, {  deep: true });
     // state加上toRef，使用时直接使用todos数组
     return {
+      ...toRefs(user),
       ...toRefs(state),
       addTodo,
       deleteTodo,
