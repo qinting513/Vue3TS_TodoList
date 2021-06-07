@@ -32,8 +32,9 @@
 git branch -a
 
 结果（当前是在develop分支）：
-* develop
+  develop
   master
+* qtdevelop
   remotes/origin/develop
   remotes/origin/master
   
