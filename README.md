@@ -26,4 +26,18 @@
 删除远程分支：git push origin :name
 
 ```
-develop
+
+1.先检查你当前所在的分支 (前面有*号 绿色标识的就是当前分支，注意区分本地分支和远程分支)
+git branch -a
+
+结果（当前是在develop分支）：
+* develop
+  master
+  remotes/origin/develop
+  remotes/origin/master
+  
+2. 进行开发后 检查文件状态 git status
+3. 提交文件 git add .
+4. 添加描述 git commit -m"描述"
+5. 直接push  直接push的话 则直接push到远程的remotes/origin/develop
+   如果git checkout master 切换到本地master分支，然后
