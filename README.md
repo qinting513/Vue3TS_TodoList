@@ -39,5 +39,6 @@ git branch -a
 2. 进行开发后 检查文件状态 git status
 3. 提交文件 git add .
 4. 添加描述 git commit -m"描述"
-5. 直接push  直接push的话 则直接push到远程的remotes/origin/develop
-   如果git checkout master 切换到本地master分支，然后
+5. （1）直接push  直接push的话 则直接push到远程的remotes/origin/develop 
+       管理员在远程看会有 compare & pull request的请求
+   （2）如果git checkout master 切换到本地master分支，然后再合并到本地分支，
