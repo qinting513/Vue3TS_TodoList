@@ -1,7 +1,7 @@
 # git 常用的命令
 
 ```
-1. 使用history 可以查看你最近输入的命令
+1. history 可以查看你最近输入的命令
     qt@qtdeMacBook-Pro-2 Vue3TS_TodoList % history
     1081  git branch --remote
     1082  git status
