@@ -16,6 +16,10 @@
 添加记录：git add file 或 git add .
 添加描述：git commit -m "miao shu nei rong"
 提交数据：git push origin name
+查看提交记录： git reflog
+查看修改点: git diff
+入栈存储： git stash 
+出栈: git stash pop
 
 3.分支操作
 查看分支：git branch  -a 查看所有分支   git branch --remote 查看远程所有分支
@@ -75,4 +79,37 @@ git branch -a
             git push 或者git push origin master 都是推送到远程的
             git log 和git status 常配合以上命令使用
         
+```
+
+3. 标签
+```
+创建标签
+git tag -a v1.0 -m '正式版本'
+-a 创建指令 后面是标签名称
+-m 添加备注 后面是备注内容
+
+查看标签
+git tag
+V1.0
+删除标签
+git tag -d v1.0
+-d 删除指令 后面是标签名称
+
+打标签
+如果直接使用 git tag -a v1.0 -m '正式版本' 打标签，绑定的是最近commit的版本
+如果你想给某个指定的commit版本打标签，则使用：
+git tag -a V1.0 55d8e71fc7d0b8cefbb4cbee339beb9d987d9b81 -m '正式版本'
+55d8e71fc7d0b8cefbb4cbee339beb9d987d9b81为commit的版本号
+
+标签同步到远程服务器
+同提交代码后，使用git push来推送到远程服务器一样，tag也需要进行推送才能到远端服务器。
+使用git push origin V1.0
+推送本地所有tag，使用git push origin --tags
+查看远程服务器标签git ls-remote --tags
+
+检出标签
+我们可以根据标签，检出相应版本的代码
+git checkout V1.0
+实际使用中，可以先创建新的分支，再检出相应标签的代码，在标签版本的基础上再进行开发
+
 ```
