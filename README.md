@@ -1,19 +1,7 @@
-# todolist
+# git 常用的命令
 
-## Project setup
 ```
-npm install
-```
+1. git branch -a 查看所有分支
+2. git branch --remote 查看远程所有分支
 
-### Compiles and hot-reloads for development
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
